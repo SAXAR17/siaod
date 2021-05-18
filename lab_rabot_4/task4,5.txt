@@ -1,0 +1,7 @@
+ this.expand = function(callback){
+                _expanded = true;
+                _windowContainer.find('.header_button').removeClass('expand').addClass('collapse');
+                this.element().animate({
+                    height: this.container['title'].element().outerHeight() + this.container['description'].element().outerHeight()
+                }, "fast", callback);
+            }
